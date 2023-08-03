@@ -1,0 +1,58 @@
+/* .....Navbar......... */
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 50px;
+  cursor: pointer;
+  color: #72459b;
+  font-style: italic;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  margin: 60px 0;
+  margin-left: 25px;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #72459b;
+}
+
+.menu a:hover {
+  color: rgb(184, 44, 44);
+}
+
+@media only screen and (max-width: 768px) {
+  .menu a {
+    font-size: 1rem;
+  }
+  figcaption {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}

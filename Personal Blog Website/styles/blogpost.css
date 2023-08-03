@@ -1,0 +1,113 @@
+.blog-container {
+  width: 90%;
+  padding: auto;
+  margin: 0 auto;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.blog-main {
+  grid-area: main;
+  margin: 24px 0;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "post aside";
+  grid-gap: 30px;
+}
+.blog-header {
+  grid-area: header;
+}
+.blog-footer {
+  grid-area: footer;
+}
+.blog-post {
+  grid-area: post;
+}
+
+/* <!---- Author Info ----> */
+aside {
+  grid-area: aside;
+  overflow: hidden;
+  padding: 16px;
+  background-color: lightgray;
+}
+
+.figure-img {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+@media only screen and (max-width: 768px) {
+  figcaption {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  /* main */
+
+  .blog-main {
+    padding: 20px 10px 0 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 40%;
+    grid-template-areas:
+      "post"
+      "aside";
+  }
+
+  .blog-post {
+    overflow: hidden;
+    margin: 24px 0;
+    padding: 16px;
+    background-color: lightgray;
+  }
+
+  .about-me {
+    padding-bottom: 20px;
+  }
+  .figure-img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+  }
+
+  .blog-content a {
+    text-decoration: none;
+    border-bottom: 2px dotted;
+    font-size: 0.8rem;
+  }
+
+  blockquote {
+    quotes: "“" "”";
+    font-style: italic;
+    color: #1e54b1;
+    font-size: 1.5rem;
+  }
+
+  blockquote::before {
+    content: open-quote;
+  }
+
+  blockquote::after {
+    content: close-quote;
+  }
+
+  .blog-container {
+    width: 100%;
+    padding: 0 5px;
+  }
+}
